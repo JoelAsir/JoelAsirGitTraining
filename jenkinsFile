@@ -12,13 +12,11 @@ pipeline {
         }
         stage(‘Maven-build’) {
             steps {
-                Echo 'This is Maven Build'
                  mvn compile
             }
         }
        stage(‘Maven-deploy’) {
             steps {
-                Echo 'This is Maven Deploy'
                 mvn deploy
             }
         }
