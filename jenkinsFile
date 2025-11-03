@@ -12,12 +12,12 @@ pipeline {
         }
         stage(‘Maven-build’) {
             steps {
-                 mvn compile
+                 sh 'mvn compile'
             }
         }
        stage(‘Maven-deploy’) {
             steps {
-                mvn deploy
+                sh 'mvn deploy'
             }
         }
     }
