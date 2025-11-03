@@ -1,10 +1,25 @@
 pipeline {
     agent any
-
+       tools {
+            maven 'mvn_home'
+               }
     stages {
-        stage('Hello') {
+        stage(‘SCM-Checkout’) {
             steps {
-                echo 'Hello World'
+                git branch: 'maincourse', url: 'https://github.com/JoelAsir/JoelAsirGitTraining.git'
+
+            }
+        }
+        stage(‘Maven-build’) {
+            steps {
+                echo (’This is Maven Build’)
+                 mvn compile
+            }
+        }
+       stage(‘Maven-deploy’) {
+            steps {
+                echo (’This is Maven Deploy’)
+                mvn deploy
             }
         }
     }
