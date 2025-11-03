@@ -4,18 +4,18 @@ pipeline {
             maven 'mvn_home'
                }
     stages {
-        stage ('SCM-Checkout') {
+        stage('SCM-Checkout') {
             steps {
                 git branch: 'maincourse', url: 'https://github.com/JoelAsir/JoelAsirGitTraining.git'
 
             }
         }
-        stage (‘Maven-build’) {
+        stage(‘Maven-build’) {
             steps {
                  mvn compile
             }
         }
-       stage (‘Maven-deploy’) {
+       stage(‘Maven-deploy’) {
             steps {
                 mvn deploy
             }
