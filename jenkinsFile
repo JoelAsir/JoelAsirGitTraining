@@ -4,7 +4,7 @@ pipeline {
             maven 'mvn_home'
                }
     stages {
-        stage("SCM-Checkout’) {
+        stage("SCM-Checkout") {
             steps {
                 git branch: 'maincourse', url: 'https://github.com/JoelAsir/JoelAsirGitTraining.git'
 
