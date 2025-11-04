@@ -1,23 +1,10 @@
 pipeline {
     agent any
-       tools {
-            maven 'mvn_home'
-               }
-    stages {
-        stage('SCM-Checkout') {
-            steps {
-                git branch: 'maincourse', url: 'https://github.com/JoelAsir/JoelAsirGitTraining.git'
 
-            }
-        }
-        stage(‘Maven-build’) {
+    stages {
+        stage('Descriptive Example') {
             steps {
-                 sh 'mvn compile'
-            }
-        }
-       stage(‘Maven-deploy’) {
-            steps {
-                sh 'mvn deploy'
+                echo 'Hello World.This is my first Descriptive pipeline'
             }
         }
     }
