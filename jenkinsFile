@@ -2,10 +2,15 @@ pipeline {
     agent any
 
     stages {
-        stage('Descriptive Example') {
+        stage('Descriptive Example 1') {
             steps {
                 echo 'Hello World.This is my first Descriptive pipeline'
             }
         }
-    }
+        stage('Descriptive Example 2') {
+            steps {
+                echo 'Hello World.This is my first Descriptive pipeline'
+            }
+         }
+     }
 }
