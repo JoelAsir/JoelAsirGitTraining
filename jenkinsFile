@@ -2,12 +2,12 @@ pipeline {
     agent any
 
     stages {
-        stage('Descriptive Example 1') {
+        stage('SCM-CONFIG') {
             steps {
                 echo 'Hello World.This is my first Descriptive pipeline'
             }
         }
-        stage('Descriptive Example 2') {
+        stage('MAVEN BUILD') {
             steps {
                 echo 'Hello World.This is my first Descriptive pipeline'
             }
