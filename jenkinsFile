@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('SCM-CONFIG') {
             steps {
-                echo 'Hello World.This is my first Descriptive pipeline'
+                git branch: 'maincourse', url: 'https://github.com/JoelAsir/JoelAsirGitTraining.git'
             }
         }
         stage('MAVEN BUILD') {
