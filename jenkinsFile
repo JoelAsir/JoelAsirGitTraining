@@ -7,12 +7,20 @@ pipeline {
     stages {
         stage('SCM-CONFIG') {
             steps {
-                git branch: 'maincourse', url: 'https://github.com/JoelAsir/JoelAsirGitTraining.git'
+                git branch: 'main', url: 'https://github.com/JoelAsir/my-app.git'
+        
             }
         }
         stage('MAVEN BUILD') {
             steps {
-                mvn compile
+            
+                sh 'mvn compile'
+            }
+         }
+         stage('MAVEN DEPLOY') {
+            steps {
+            
+                sh 'mvn package'
             }
          }
      }
